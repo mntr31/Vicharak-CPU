@@ -9,6 +9,7 @@
 - [Instruction Format](#instruction-format)
 - [Signal Flow](#signal-flow)
 - [Signal Processing Applications](#signal-processing-applications)
+- [Simulation](#simulation)
 
 ## Key Features
 
@@ -16,8 +17,6 @@
 - 16 general-purpose registers
 - 256 instruction memory size
 - 256 data memory size
-- Support for basic arithmetic, logic, and control flow operations
-- Built-in stack for function calls
 
 ## Architecture Highlights
 
@@ -85,28 +84,20 @@
 ### 1. Program Counter (PC)
 The **Program Counter** keeps track of the current instruction address. It is updated on each clock cycle and can be modified by branch, jump, call, and return instructions.
 
-- **Inputs**: `clk`, `reset`, `update`, `branch`, `jump`, `call`, `ret`, `proCount_in`, and `jumpAddress`.
-- **Outputs**: `proCount_out`
 - **Stack**: A 16-level stack is implemented for handling `call` and `ret` instructions, allowing nested subroutine calls.
   
 ### 2. Instruction Fetch (InstFetch)
 The **Instruction Fetch** module fetches the instruction stored at the current address in the instruction memory. When reset, the program counter resets to zero.
 
-- **Inputs**: `clk`, `reset`, `proCount_in`
-- **Outputs**: `proCount_next`, `instruction`
 - **Instruction Memory**: Can hold up to 256 19-bit instructions.
 
 ### 3. Instruction Decoder (InstDeco)
 The **Instruction Decoder** extracts the **opcode**, **source registers**, **destination register**, and **immediate value** from a 19-bit instruction. This module serves as a translator between the binary instruction and the control signals required for processing.
 
-- **Inputs**: `instruction` (19 bits)
-- **Outputs**: `opcode` (5 bits), `rs1`, `rs2`, `rd` (4 bits each), `immediate` (11 bits)
 
 ### 4. Register File
 The **Register File** stores data in 16 general-purpose registers, each 19 bits wide. It reads from two source registers and writes data to a destination register on clock cycles where `regWrite` is enabled.
 
-- **Inputs**: `clk`, `regWrite`, `readRegister1`, `readRegister2`, `writeRegister`, `writeData`
-- **Outputs**: `data1`, `data2`
 
 ### 5. ALU (Arithmetic Logic Unit)
 The **ALU** performs arithmetic and logical operations on data, determined by a 5-bit opcode.
@@ -146,9 +137,6 @@ The **Control Unit** interprets the opcode and sets various control signals for 
 
 ### 7. Data Memory
 The **Data Memory** module allows reading and writing of data to memory addresses based on `memoryRead` and `memoryWrite` signals. It uses a 256-entry memory with 19-bit wide storage.
-
-- **Inputs**: `clk`, `memoryRead`, `memoryWrite`, `address`, `data_in`
-- **Output**: `data_out`
 
 ---
 
@@ -194,7 +182,7 @@ The **Data Memory** module allows reading and writing of data to memory addresse
 
 ### Applications by Instruction:
 
-- **MAC (Multiply-Accumulate)**: Essential in FIR filters and convolution operations, especially in audio and real-time signal processing. Each input sample is multiplied by a filter coefficient and accumulated, a key process in applying weighted sums.
+- **MAC (Multiply-Accumulate)**: Useful in FIR filters and convolution operations, especially in audio and real-time signal processing. Each input sample is multiplied by a filter coefficient and accumulated, a key process in applying weighted sums.
 - **SQR (Square)**: Used to calculate the power or energy of a signal. Useful in applications needing signal strength analysis or root-mean-square (RMS) computations.
 - **ABS (Absolute Value)**: Helps in signal rectification by converting all values to positive, a common preprocessing step in audio signal processing and demodulation.
 - **AVG (Average)**: Helps reduce noise in signals, a foundational operation in smoothing, and low-pass filtering, where it can reduce high-frequency noise to make important signal features more discernible.
@@ -203,3 +191,7 @@ These operations facilitate crucial DSP tasks, enabling functions like:
 - **Filtering:** Using MAC for FIR and IIR filters.
 - **Feature Extraction:** Calculating ABS and AVG, often needed in feature extraction to enhance key signal characteristics.
 - **Scaling and Normalization:** Using MUL, DIV, and ADD to rescale signals, normalize for amplitude consistency, and control signal strength.
+
+## Simulation
+![Screenshot 2024-11-06 124619](https://github.com/user-attachments/assets/a32e3cb4-8385-48bd-bcbf-d9dfa0136ecb)
+- Here first I executed `ADD` instruction and then `SUB` instruction.
