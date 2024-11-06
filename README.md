@@ -199,4 +199,5 @@ These operations facilitate crucial DSP tasks, enabling functions like:
 ## Simulation
 ![Screenshot 2024-11-06 124619](https://github.com/user-attachments/assets/a32e3cb4-8385-48bd-bcbf-d9dfa0136ecb)
 - Here first I executed `ADD` instruction and then `SUB` instruction.
+- Tools used: Quartus 2 web edition, Modelsim
 - [Videos](https://drive.google.com/drive/folders/1eS_TWkPu0U9vBViRq6ma_H2gPQA1itCu?usp=drive_link)
