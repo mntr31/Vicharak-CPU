@@ -10,14 +10,14 @@
 - [Signal Flow](#signal-flow)
 - [Signal Processing Applications](#signal-processing-applications)
 - [Simulation](#simulation)
-
+---
 ## Key Features
 
 - 19-bit data width
 - 16 general-purpose registers
 - 256 instruction memory size
 - 256 data memory size
-
+---
 ## Architecture Highlights
 
 ```
@@ -53,7 +53,7 @@
                    │  Access   │
                    └───────────┘
 ```
-
+---
 ## Pipeline Stages
 
 1. **Fetch Stage**
@@ -78,6 +78,9 @@
    - Handles memory read/write operations
    - Manages data memory access
    - Processes load/store instructions
+
+---
+
 ## Key Components 
 ![image](https://github.com/user-attachments/assets/50799615-7e2c-45ec-b8e9-9dd50c002c0d)
 
@@ -192,6 +195,7 @@ These operations facilitate crucial DSP tasks, enabling functions like:
 - **Feature Extraction:** Calculating ABS and AVG, often needed in feature extraction to enhance key signal characteristics.
 - **Scaling and Normalization:** Using MUL, DIV, and ADD to rescale signals, normalize for amplitude consistency, and control signal strength.
 
+---
 ## Simulation
 ![Screenshot 2024-11-06 124619](https://github.com/user-attachments/assets/a32e3cb4-8385-48bd-bcbf-d9dfa0136ecb)
 - Here first I executed `ADD` instruction and then `SUB` instruction.
