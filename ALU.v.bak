@@ -1,0 +1,24 @@
+module ALU(input[18:0] op1,op2,
+				input [3:0] opcode,
+				output reg [18:0] alu_result);
+always @(*) 
+begin
+case(opcode)
+	4'b0000: alu_result = op1+op2;
+	4'b0001: alu_result = op1-op2;
+	4'b0010: alu_result = op1*op2;
+	4'b0011: alu_result = op1/op2;
+	4'b0100: alu_result = op1&op2;
+	4'b0101: alu_result = op1|op2;
+	4'b0110: alu_result = op1^op2;
+	4'b0111: alu_result = ~op1;
+	4'b1000: alu_result = op1*op2 + result; //MAC (Multiply-Accumulate)
+	4'b1011: alu_result = op1*op1; //SQR (Square)
+	4'b1010: alu_result = (op1>19'b0)?op1: -op1; //ABS (Absolute value)
+	4'b1011: alu_result = (op1+op2)>>1; //AVG (Average value, left shifting 1 bit so divided by 2)
+	
+		default: alu_result = 19'b0;
+		endcase
+end
+
+endmodule

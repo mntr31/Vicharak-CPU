@@ -1,0 +1,15 @@
+module ProgramCounter(input clk, reset,
+							 input [18:0] proCount_in,
+							 output reg [18:0] proCount_out);
+//Behavoiral modeling
+always @(posedge clk or posedge reset)
+begin
+			if(reset)
+			begin
+			proCount_out<=0;
+			end
+			else begin
+			proCount_out<=proCount_in;
+			end
+end
+endmodule

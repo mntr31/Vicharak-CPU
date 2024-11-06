@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/CPU.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ProgramCounter.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstDeco.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstFetch.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/RegisterFile.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ALU.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ControlUnit.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/DataMemory.v
+source_file = 1, C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/db/CPU.cbx.xml
+design_name = CPU
+instance = comp, \clk~input , clk~input, CPU, 1
+instance = comp, \reset~input , reset~input, CPU, 1

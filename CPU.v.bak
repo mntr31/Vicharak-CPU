@@ -1,0 +1,8 @@
+module CPU(input clk,reset);
+
+// 19 bit architecture
+wire [18:0] proCount,writeData,instruction,alu_result,memoryData; // Program Counter, Instruction, result of ALU and other data of 19 bit
+wire [3:0]  opcode,rs1,rs2,rd; // Opcode and address of source, destination registers of 4 bits, total 16 registers
+wire [10:0] immediate; // Immediate value
+wire regWrite,memoryRead, memoryWrite, branch, jump; // Other signals
+
