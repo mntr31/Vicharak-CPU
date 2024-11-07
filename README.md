@@ -67,7 +67,7 @@
      - 4-bit source register 1 (rs1)
      - 4-bit source register 2 (rs2)
      - 4-bit destination register (rd)
-     - 11-bit immediate value (when applicable)
+     - 10-bit immediate value (when applicable)
 
 3. **Execute Stage**
    - Performs ALU operations
@@ -82,7 +82,8 @@
 ---
 
 ## Key Components 
-![image](https://github.com/user-attachments/assets/50799615-7e2c-45ec-b8e9-9dd50c002c0d)
+![Screenshot 2024-11-07 105745](https://github.com/user-attachments/assets/c1e717e1-83eb-4045-8faa-c0e6fbf8356a)
+
 
 ### 1. Program Counter (PC)
 The **Program Counter** keeps track of the current instruction address. It is updated on each clock cycle and can be modified by branch, jump, call, and return instructions.
@@ -124,6 +125,11 @@ The **ALU** performs arithmetic and logical operations on data, determined by a 
 | `5'b01101`         | DEC             | Decrement `op1` by 1                                  | 
 | `5'b01111`         | BEQ             | Branch if `op1 == op2` (1 if equal, 0 otherwise)      | 
 | `5'b10000`         | BNE             | Branch if `op1 != op2` (1 if not equal, 0 otherwise)  | 
+| `5'b10001`         | ADDI            | Adds `op1` and `immediate` value                      | 
+| `5'b10010`         | SUBI            | Subtracts `immediate` from `op1`                      | 
+| `5'b10011`         | ANDI            | Bitwise AND of `op1` and `immediate`                  | 
+| `5'b10100`         | ORI             | Bitwise OR of `op1` and `immediate`                   | 
+
 
 ### 6. Control Unit
 The **Control Unit** interprets the opcode and sets various control signals for different operations, managing data flow within the CPU.
@@ -151,7 +157,7 @@ The **Data Memory** module allows reading and writing of data to memory addresse
 | 13–10       | rs1        | Source register 1                |
 | 9–6         | rs2        | Source register 2                |
 | 5–2         | rd         | Destination register             |
-| 10–0        | Immediate  | Immediate value for operations   |
+| 9–0         | Immediate  | Immediate value for operations   |
 
 ---
 ## Signal Flow
