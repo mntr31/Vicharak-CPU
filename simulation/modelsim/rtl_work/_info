@@ -1,0 +1,173 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\mantr\Desktop\Vicharak\Vicharak-CPU\simulation\modelsim
+vALU
+IR3]W:JSZk<BJ?80njh<B^0
+VE^5I0aH;VBGjbC=ZJ[HV@1
+Z1 dC:\Users\mantr\Desktop\Vicharak\Vicharak-CPU\simulation\modelsim
+w1730855249
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ALU.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ALU.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU -O0
+n@a@l@u
+!i10b 1
+!s100 H2gZTa:_fBae@@lMem`0B3
+!s85 0
+!s108 1730884422.399000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ALU.v|
+!s101 -O0
+vControlUnit
+IlSOD`M]n3K`9_oQjJK9na3
+VC8QH6<nFCc1oUbD7BWJFc2
+R1
+w1730855250
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ControlUnit.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ControlUnit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@control@unit
+!i10b 1
+!s100 =YZiK?Vo<Czo8l;h^C73E0
+!s85 0
+!s108 1730884422.476000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ControlUnit.v|
+!s101 -O0
+vCPU
+ILh7jQMDAzgW6QCTbgB3Se2
+VEa5ASA_GBSaU3XfOkkHPX1
+R1
+w1730539099
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/CPU.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/CPU.v
+L0 1
+R2
+r1
+31
+R3
+n@c@p@u
+R4
+!i10b 1
+!s100 lMX<Yi=jGOEgNkzD9UD6?0
+!s85 0
+!s108 1730884420.998000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/CPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/CPU.v|
+!s101 -O0
+vDataMemory
+!i10b 1
+!s100 dBcNCW]4Ybl`D7]chHAL01
+I9lXoI>Yl_iG^HL_@e0>o[0
+Vc^AbER=6W??Ag=4Sl`lK_0
+R1
+w1730537951
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/DataMemory.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/DataMemory.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1730884422.553000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/DataMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/DataMemory.v|
+!s101 -O0
+R3
+R4
+n@data@memory
+vInstDeco
+ILY@Hi76Xk:`4]Io1HXUja3
+V8dAFoF?Z;Wa6:=Z4aLlU;3
+R1
+w1730491697
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstDeco.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstDeco.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@inst@deco
+!i10b 1
+!s100 7Sl`iEl<GM0W3`dZlTKHn2
+!s85 0
+!s108 1730884422.116000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstDeco.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstDeco.v|
+!s101 -O0
+vInstFetch
+IH87g3N`PLYG1`oUVGo91Z2
+VGJQ1=N4T?LKIINAo>;FSE3
+R1
+w1730855543
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstFetch.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstFetch.v
+L0 2
+R2
+r1
+31
+R3
+R4
+n@inst@fetch
+!i10b 1
+!s100 WF5bEkcm]U@X`HC:4Qz?b2
+!s85 0
+!s108 1730884422.241000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstFetch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstFetch.v|
+!s101 -O0
+vProgramCounter
+ICzh4Yg[b[=^jmhS2=>F463
+V=LlQzK>ckP>jac@E=`dNU1
+R1
+w1730855412
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ProgramCounter.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ProgramCounter.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@program@counter
+!i10b 1
+!s100 zN?Bj^[@HQ`KDjSn;ijX?1
+!s85 0
+!s108 1730884422.000000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ProgramCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ProgramCounter.v|
+!s101 -O0
+vRegisterFile
+IgmJ1HFY`_T6mL^z0RN4;=1
+VRHP5hV4@RfTe[l@_B3JZg0
+R1
+w1730289129
+8C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/RegisterFile.v
+FC:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/RegisterFile.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@register@file
+!i10b 1
+!s100 gz4Gda=L=6zPb6SR>KaO20
+!s85 0
+!s108 1730884422.316000
+!s107 C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/RegisterFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU|C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/RegisterFile.v|
+!s101 -O0

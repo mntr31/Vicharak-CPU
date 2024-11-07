@@ -5,7 +5,7 @@ wire [18:0] proCount, proCount_next, proCount_update, writeData, instruction, al
 wire [18:0] data1,data2,address;
 wire [4:0]  opcode;
 wire [3:0]  rs1,rs2,rd; // Address of source, destination registers of 4 bits, total 16 registers
-wire [10:0] immediate; // Immediate value
+wire [9:0] immediate; // Immediate value
 wire regWrite,memoryRead, memoryWrite, branch, jump, call, ret; // Other signals
 
 //We will instantiate the modules
@@ -19,7 +19,7 @@ InstDeco instdeco_module(.instruction(instruction), .opcode(opcode),.rs1(rs1),.r
 RegisterFile rfile(.clk(clk),.regWrite(regWrite), .readRegister1(rs1), .readRegister2(rs2), .writeRegister(rd), 
 						 .writeData(writeData), .data1(data1), .data2(data2));
 
-ALU alumodule(.op1(data1),.op2(data2),.opcode(opcode), .alu_result(alu_result));
+ALU alumodule(.op1(data1),.op2(data2),.opcode(opcode), .alu_result(alu_result),.immediate(immediate));
 
 ControlUnit cumodule(.opcode(opcode), .regWrite(regWrite), .memoryRead(memoryRead),.memoryWrite(memoryWrite),
 							.branch(branch),.jump(jump),.call(call),.ret(ret));

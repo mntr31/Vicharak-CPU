@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Wed Nov 06 06:42:27 2024
+Thu Nov 07 10:55:52 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,11 +15,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Port Connectivity Checks: "DataMemory:dmmodule"
- 10. Port Connectivity Checks: "InstDeco:instdeco_module"
- 11. Port Connectivity Checks: "ProgramCounter:pc"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
+ 10. Port Connectivity Checks: "ProgramCounter:pc"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,7 +44,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 06 06:42:27 2024      ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 07 10:55:52 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; CPU                                        ;
 ; Top-level Entity Name              ; CPU                                        ;
@@ -233,15 +232,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "InstDeco:instdeco_module"                                                                ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; immediate ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ProgramCounter:pc"                                                                                                                                                                  ;
 +--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -266,7 +256,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Nov 06 06:42:26 2024
+    Info: Processing started: Thu Nov 07 10:55:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
@@ -293,6 +283,10 @@ Info (12128): Elaborating entity "InstDeco" for hierarchy "InstDeco:instdeco_mod
 Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:rfile"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alumodule"
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:cumodule"
+Warning (10272): Verilog HDL Case Statement warning at ControlUnit.v(194): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at ControlUnit.v(205): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at ControlUnit.v(216): case item expression covers a value already covered by a previous case item
+Warning (10272): Verilog HDL Case Statement warning at ControlUnit.v(227): case item expression covers a value already covered by a previous case item
 Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:dmmodule"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/output_files/CPU.map.smsg
@@ -304,10 +298,10 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 4683 megabytes
-    Info: Processing ended: Wed Nov 06 06:42:27 2024
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu Nov 07 10:55:52 2024
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

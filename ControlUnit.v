@@ -3,7 +3,8 @@ module ControlUnit(input [4:0] opcode,/*changing from 4 bit opcode to 5 bit opco
 always @(*)begin
 case(opcode)
 //ADD
-5'b00000, 5'b00001,5'b00010,5'b00011,5'b00100,5'b00101,5'b00110,5'b00111,5'b01000,5'b01001,5'b01010,5'b01011,5'b01100,5'b01101: begin
+5'b00000, 5'b00001,5'b00010,5'b00011,5'b00100,5'b00101,5'b00110,5'b00111,5'b01000,5'b01001,5'b01010,5'b01011,5'b01100,5'b01101,
+5'b10001,5'b10010,5'b10011,5'b10100: begin
 	regWrite = 1;
 	memoryRead = 0;
 	memoryWrite = 0;

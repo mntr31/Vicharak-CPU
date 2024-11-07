@@ -1,0 +1,111 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do CPU_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/CPU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CPU
+# 
+# Top level modules:
+# 	CPU
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ProgramCounter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ProgramCounter
+# 
+# Top level modules:
+# 	ProgramCounter
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstDeco.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InstDeco
+# 
+# Top level modules:
+# 	InstDeco
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/InstFetch.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InstFetch
+# 
+# Top level modules:
+# 	InstFetch
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/RegisterFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RegisterFile
+# 
+# Top level modules:
+# 	RegisterFile
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ControlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU {C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/DataMemory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# 
+vsim work.CPU
+# vsim work.CPU 
+# Loading work.CPU
+# Loading work.ProgramCounter
+# Loading work.InstFetch
+# Loading work.InstDeco
+# Loading work.RegisterFile
+# Loading work.ALU
+# Loading work.ControlUnit
+# Loading work.DataMemory
+# ** Warning: (vsim-3015) C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/CPU.v(13): [PCDPC] - Port size (1 or 1) does not match connection size (19) for port 'update'. The port definition is at: C:/Users/mantr/Desktop/Vicharak/Vicharak-CPU/ProgramCounter.v(1).
+# 
+#         Region: /CPU/pc
+add wave -position insertpoint  \
+sim:/CPU/clk \
+sim:/CPU/reset \
+sim:/CPU/proCount \
+sim:/CPU/proCount_next \
+sim:/CPU/proCount_update \
+sim:/CPU/writeData \
+sim:/CPU/instruction \
+sim:/CPU/alu_result \
+sim:/CPU/memoryData \
+sim:/CPU/data1 \
+sim:/CPU/data2 \
+sim:/CPU/address \
+sim:/CPU/opcode \
+sim:/CPU/rs1 \
+sim:/CPU/rs2 \
+sim:/CPU/rd \
+sim:/CPU/immediate \
+sim:/CPU/regWrite \
+sim:/CPU/memoryRead \
+sim:/CPU/memoryWrite \
+sim:/CPU/branch \
+sim:/CPU/jump \
+sim:/CPU/call \
+sim:/CPU/ret
+force -freeze sim:/CPU/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/CPU/reset 1 0
+run
+force -freeze sim:/CPU/reset 0 0
+force -freeze sim:/CPU/instruction 0000000101010111111 0
+force -freeze sim:/CPU/data1 1101010 0
+force -freeze sim:/CPU/data2 111100 0
+run
+force -freeze sim:/CPU/instruction 0000100101010111111 0
+run
+force -freeze sim:/CPU/instruction 0001000101010111111 0
+run
